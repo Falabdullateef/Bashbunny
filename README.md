@@ -9,5 +9,5 @@ For more information on the Bash Bunny, visit [Bash Bunny Wiki](https://wiki.bas
 - [Emailwebcreds](./Emailwebcreds) - Script for capturing web credentials and emailing them.
 - [Credentials](./credentials) - General credential harvesting scripts.
 - [Execution](./execution) - Scripts focused on specific execution tasks.
-- [Flashwebcreds](./flashwebcreds) - Script for capturing web credentials and storing them on a flash drive.
+- [Flashwebcreds](./flashwebcreds) - Script for capturing web credentials and storing them on a flash drive or the bashbunny's storage.
 
